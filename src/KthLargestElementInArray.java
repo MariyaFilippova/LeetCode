@@ -3,7 +3,7 @@ import java.util.*;
 public class KthLargestElementInArray {
 
     int randomizedPartition(int[] a, int p, int r) {
-        int i = (int) (Math.random() *(r - p)) + p;
+        int i = (int) (Math.random() * (r - p)) + p;
         int c = a[r];
         a[r] = a[i];
         a[i] = c;
@@ -24,12 +24,12 @@ public class KthLargestElementInArray {
         for (int j = l; j < r; j++) {
             if (a[j] <= x) {
                 i++;
-                int c =  a[i];
+                int c = a[i];
                 a[i] = a[j];
                 a[j] = c;
             }
         }
-        int position = i+ 1;
+        int position = i + 1;
         int c = a[position];
         a[position] = a[r];
         a[r] = c;
@@ -47,15 +47,13 @@ public class KthLargestElementInArray {
     int findKthLargest(int[] array, int k) {
         int l = 0;
         int r = array.length - 1;
-        while(true) {
+        while (true) {
             int position = randomizedPartition(array, l, r);
             if (position < k) {
                 l = position + 1;
-            }
-            else if (position > k) {
+            } else if (position > k) {
                 r = position - 1;
-            }
-            else {
+            } else {
                 return array[k];
             }
         }

@@ -10,7 +10,7 @@ public class CarpRabin {
         Scanner scanner = new Scanner(System.in);
         String pattern = scanner.next();
         String s = scanner.next();
-        List<Integer> occ = CarpRabin.RabinKarp(s, pattern);
+        List<Integer> occ = CarpRabin.RabinCarp(s, pattern);
         for (int i : occ) {
             System.out.print(i + " ");
         }
@@ -19,7 +19,7 @@ public class CarpRabin {
         return (long)(ch - 'A' + 1);
     }
 
-    public static List<Integer> RabinKarp(String text, String pattern) {
+    public static List<Integer> RabinCarp(String text, String pattern) {
         int a = 53;
         long m = 1_000_000_000 + 9;
         long patternHash = 0;

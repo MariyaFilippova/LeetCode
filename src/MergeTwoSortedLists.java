@@ -1,10 +1,8 @@
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Scanner;
 
 public class MergeTwoSortedLists {
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ArrayList<ListNode> list = new ArrayList<>();
         while (l1 != null && l2 != null) {
             if (l1.val > l2.val) {
@@ -26,6 +24,9 @@ public class MergeTwoSortedLists {
         }
         for (int i = 0; i < list.size() - 1; i++) {
             list.get(i).next = list.get(i + 1);
+        }
+        if ( list.size() == 0) {
+            return null;
         }
         return list.get(0);
     }

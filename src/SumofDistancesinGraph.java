@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
-public class SumofDistancesinTree {
-    public int[] sumOfDistancesInTree(int N, int[][] edges) {
+public class SumofDistancesinGraph {
+    public int[] sumofDistancesinGraph(int N, int[][] edges) {
         Graph graph = new Graph(N);
         int k = edges.length;
         int[] ans = new int[N];

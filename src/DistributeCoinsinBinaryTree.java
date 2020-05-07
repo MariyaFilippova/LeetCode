@@ -14,7 +14,7 @@ public class DistributeCoinsinBinaryTree {
         }
         int left = dfs(root.left);
         int right = dfs(root.right);
-        counter += left + right;
+        counter += Math.abs(left) + Math.abs(right);
         return root.val + left + right - 1;
     }
 

@@ -1,3 +1,3 @@
 # LeetCode
-Solutions of some problems on leetcode
-Name of class - name of problem on Leetcode
+Solutions of some problems on leetcode 
+ https://leetcode.com/mariyafilippova/

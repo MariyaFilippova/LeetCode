@@ -11,11 +11,11 @@ class Temprature {
     }
 }
 
-class Node {
+class TNode {
     int number;
     int val;
 
-    Node (int n, int v) {
+    TNode(int n, int v) {
         this.number = n;
         this.val = v;
     }
@@ -30,13 +30,13 @@ public class DailyTemperatures {
             head = head.next;
             size++;
         }
-        Node[] nodes = new Node[size];
+        TNode[] nodes = new TNode[size];
         for (int i = 0; i<size; i++) {
-            nodes[i] = new Node(i, head.val);
+            nodes[i] = new TNode(i, head.val);
             head = head.next;
         }
         int[] out = new int[size];
-        Stack<Node> temp = new Stack<>();
+        Stack<TNode> temp = new Stack<>();
         for (int i = 0; i < size; i++) {
             if (temp.empty()) {
                 temp.push(nodes[i]);

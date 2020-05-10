@@ -17,10 +17,10 @@ public class BinaryTreeLevelOrderTraversal {
             TreeNode node = queue.poll();
             while (s != 0) {
                 level.add(node.val);
-                if (root.left != null) {
+                if (node.left != null) {
                     queue.add(node.left);
                 }
-                if (root.right != null) {
+                if (node.right != null) {
                     queue.add(node.right);
                 }
                 s--;

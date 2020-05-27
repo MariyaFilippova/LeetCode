@@ -32,7 +32,7 @@ public class PseudoPalindromicPathsinaBinaryTree {
                 localCounter++;
             }
         }
-        return localCounter > 1;
+        return localCounter <= 1;
     }
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-public class LowestCommonAncestorofaBinarySearchTree {
+public class LowestCommonAncestorofaBinaryTree {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         return commonAncestor(root, p, q);
     }

@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class LongestIncreasingSubsequence {
-    int max = Integer.MIN_VALUE;
+    int max = 1;
     int index = 0;
 
     public int lengthOfLIS(int[] nums) {

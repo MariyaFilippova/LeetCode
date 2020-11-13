@@ -19,7 +19,7 @@ public class Combinations {
                 continue;
             }
             list.add(i);
-            backtrack(n, k, list, start + 1);
+            backtrack(n, k, list, i + 1);
             list.remove(list.size() - 1);
         }
     }

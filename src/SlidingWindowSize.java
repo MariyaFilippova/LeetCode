@@ -5,7 +5,7 @@ import java.util.Stack;
 public class SlidingWindowSize {
     public int[] maxSlidingWindow(int[] nums, int k) {
         ArrayList<Integer> max = new ArrayList<>();
-        int in_max = 0;
+        int in_max = -2147483648;
         Stack<Integer> in = new Stack<Integer>();
         Stack<Integer> out = new Stack<Integer>();
         Stack<Integer> out_max = new Stack<Integer>();
@@ -15,14 +15,14 @@ public class SlidingWindowSize {
         }
         for (int i = k; i < nums.length; i++) {
             if (out.empty()) {
-                int m = 0;
+                int m = -2147483648;
                 while (!in.empty()) {
                     int a = in.pop();
                     out.push(a);
                     m = Math.max(a, m);
                     out_max.push(m);
                 }
-                in_max = 0;
+                in_max = -2147483648;
             }
             if (in.empty()) {
                 max.add(out_max.peek());
@@ -36,10 +36,10 @@ public class SlidingWindowSize {
             out_max.pop();
         }
         if (out_max.empty()) {
-            System.out.print(in_max);
+            max.add(in_max);
         }
         else {
-            System.out.print(Math.max(in_max, (int) out_max.peek()));
+            max.add(Math.max(in_max, (int) out_max.peek()));
         }
         int[] res = new int[max.size()];
         for (int i = 0; i<max.size(); i++) {

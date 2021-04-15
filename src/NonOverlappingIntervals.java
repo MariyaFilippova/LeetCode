@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class NonОverlappingIntervals {
+public class NonOverlappingIntervals {
     public int eraseOverlapIntervals(int[][] intervals) {
         if (intervals.length == 0) {
             return 0;

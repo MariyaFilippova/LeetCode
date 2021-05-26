@@ -8,7 +8,9 @@ class Node {
     public List<Node> children;
 
     public Node() {}
-
+    public Node left;
+    public Node right;
+    public Node parent;
     public Node(int _val) {
         val = _val;
     }
